@@ -12,7 +12,7 @@
 <link rel="canonical" href="https://sullivanprewitt.com/">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"S. Sullivan Prewitt","alternateName":["Sullivan Prewitt","Sullivan Noir"],"jobTitle":"Painter","homeLocation":{"@type":"Place","name":"Charlotte, North Carolina"},"sameAs":["https://www.instagram.com/sullivannoir/"]}
+{"@context":"https://schema.org","@type":"Person","name":"S. Sullivan Prewitt","alternateName":["Sullivan Prewitt","Sullivan Noir"],"jobTitle":"Painter","homeLocation":{"@type":"Place","name":"Charlotte, North Carolina"},"sameAs":["https://www.instagram.com/sullivanprewitt/"]}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -193,7 +193,7 @@
         <div class="step"><b>03</b><span>In progress</span><p>Get photo updates as the layers come together.</p></div>
         <div class="step"><b>04</b><span>Delivery</span><p>The signed original is packed and delivered or shipped.</p></div>
       </div>
-      <a class="btn" href="https://www.instagram.com/sullivannoir/" target="_blank" rel="noopener">Start a commission</a>
+      <a class="btn" href="https://www.instagram.com/sullivanprewitt/" target="_blank" rel="noopener">Start a commission</a>
     </div>
   </div>
 </section>
@@ -220,13 +220,13 @@
     <div class="eyebrow">Collect · Commission · Exhibit</div>
     <h2>Bring a piece <i class="serif" style="color:var(--gold)">home</i></h2>
     <p>For pricing, availability, private viewings, commissions or exhibition inquiries, message the artist directly. Follow along for new work and first look at new releases.</p>
-    <a class="btn solid" href="https://www.instagram.com/sullivannoir/" target="_blank" rel="noopener">@sullivannoir on Instagram</a>
+    <a class="btn solid" href="https://www.instagram.com/sullivanprewitt/" target="_blank" rel="noopener">@sullivanprewitt on Instagram</a>
   </div>
 </section>
 
 <footer>
   <span>© 2026 S. Sullivan Prewitt. All works original. Images may not be reproduced without permission.</span>
-  <span><a href="https://www.instagram.com/sullivannoir/" target="_blank" rel="noopener">Instagram</a> · Charlotte, North Carolina</span>
+  <span><a href="https://www.instagram.com/sullivanprewitt/" target="_blank" rel="noopener">Instagram</a> · Charlotte, North Carolina</span>
 </footer>
 
 <div class="view" id="view" role="dialog" aria-modal="true" aria-label="Artwork detail">
@@ -238,7 +238,7 @@
       <dl class="meta" id="vMeta"></dl>
       <div class="desc" id="vDesc"></div>
       <div class="acts">
-        <a class="btn solid" href="https://www.instagram.com/sullivannoir/" target="_blank" rel="noopener">Inquire about this piece</a>
+        <a class="btn solid" href="https://www.instagram.com/sullivanprewitt/" target="_blank" rel="noopener">Inquire about this piece</a>
         <button class="btn" id="vCopy">Copy inquiry message</button>
       </div>
       <div class="note" id="vNote"></div>
@@ -291,7 +291,7 @@ const WORKS = [
  {id:"facing-the-sun",title:"Better Days",year:"2026",medium:"Acrylic on canvas",size:"18 × 24 in",o:"portrait",status:"Available",price:"$2,800",
   desc:["A woman in profile, painted in deep cobalt and sky blue, turns toward a field of bright yellow. Her hair sweeps back in white-tipped strokes like wind, water or wings.", "Near her eye there is one mark of red and white, the only warm note on her face, like a tear she has already cried or a scar that has healed. Her mouth is slightly open, as if she is taking her first full breath in a long time.", "Everything behind her is cool and moving. Everything ahead of her is warm and still. She has decided which way to face."]}
 ];
-const IG = "https://www.instagram.com/sullivannoir/";
+const IG = "https://www.instagram.com/sullivanprewitt/";
 const dotClass = s => s==="Sold"?"sold":s==="Not for sale"?"nfs":"";
 
 // grid
@@ -343,7 +343,7 @@ view.addEventListener('touchend',e=>{if(sx===null)return;const dx=e.changedTouch
 document.getElementById('vCopy').onclick=async()=>{
   const w=WORKS[cur],msg=`Hi! I'm interested in "${w.title}" (${w.size}). Is it still available?`;
   const note=document.getElementById('vNote');
-  try{await navigator.clipboard.writeText(msg);note.textContent="Copied. Paste it into a DM to @sullivannoir."}
+  try{await navigator.clipboard.writeText(msg);note.textContent="Copied. Paste it into a DM to @sullivanprewitt."}
   catch(e){note.textContent=msg}
 };
 function idxFromHash(){const id=location.hash.slice(1);return WORKS.findIndex(w=>w.id===id)}
