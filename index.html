@@ -121,6 +121,28 @@
     nav a.hide-sm{display:none}
     nav a{margin-left:16px}
   }
+
+  .stage-hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden;border-bottom:1px solid var(--line)}
+  .mosaic{position:absolute;inset:-8%;display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:1fr;gap:6px;transform:rotate(-4deg) scale(1.08);animation:drift 40s ease-in-out infinite alternate}
+  .mosaic img{width:100%;height:100%;object-fit:cover;filter:saturate(1.1)}
+  @keyframes drift{from{transform:rotate(-4deg) scale(1.08) translateY(0)}to{transform:rotate(-4deg) scale(1.08) translateY(-4%)}}
+  .stage-hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(13,12,11,.96) 0%,rgba(13,12,11,.86) 45%,rgba(13,12,11,.55) 100%)}
+  .mesh{position:absolute;inset:0;z-index:2;opacity:.35;background-image:repeating-linear-gradient(0deg,rgba(0,0,0,.55) 0 2px,transparent 2px 9px),repeating-linear-gradient(90deg,rgba(0,0,0,.55) 0 2px,transparent 2px 9px)}
+  .stage-hero .hero{position:relative;z-index:3;width:100%}
+  .stage-hero h1{text-shadow:0 4px 30px rgba(0,0,0,.6)}
+  .stage-hero p{font-family:"Bodoni Moda",serif;font-style:italic;font-size:clamp(20px,2.2vw,27px)!important;line-height:1.35;color:var(--paper)!important;border-left:2px solid var(--gold);padding-left:18px}
+  .scroll-cue{position:absolute;z-index:3;bottom:22px;left:50%;transform:translateX(-50%);color:var(--gold);text-decoration:none;font-size:22px;animation:bob 2s ease-in-out infinite}
+  @keyframes bob{50%{transform:translate(-50%,6px)}}
+  .ribbon{overflow:hidden;border-bottom:1px solid var(--line);background:#080807;padding:14px 0}
+  .ribbon-track{display:flex;gap:14px;width:max-content;animation:slide 70s linear infinite}
+  .ribbon-track img{height:120px;width:auto;display:block;cursor:pointer;opacity:.85;transition:opacity .2s}
+  .ribbon-track img:hover{opacity:1}
+  .ribbon:hover .ribbon-track{animation-play-state:paused}
+  @keyframes slide{to{transform:translateX(-50%)}}
+  .sec-head h2,.two h2{position:relative}
+  .sec-head h2::after{content:"";display:block;width:64px;height:2px;background:var(--gold);margin-top:18px}
+  @media (prefers-reduced-motion:reduce){.mosaic,.ribbon-track,.scroll-cue{animation:none}}
+  @media (max-width:900px){.mosaic{grid-template-columns:repeat(3,1fr)}.stage-hero{min-height:88vh}.stage-hero::before{background:linear-gradient(180deg,rgba(13,12,11,.45) 0%,rgba(13,12,11,.82) 40%,rgba(13,12,11,.82) 75%,rgba(13,12,11,.5) 100%)}.ribbon-track img{height:90px}}
 </style>
 </head>
 <body>
@@ -135,17 +157,24 @@
   </nav>
 </header>
 
-<div class="wrap hero" id="top">
-  <div>
-    <div class="eyebrow">Original paintings · Charlotte, NC</div>
-    <h1>S. Sullivan<br><i>Prewitt</i></h1>
-    <p>I don't plan a painting. I feel it, and when it's finished, it tells me what it is.</p>
-    <div class="cta">
-      <a class="btn solid" href="#works">View the works</a>
-      <a class="btn" href="#contact">Inquire</a>
+<div class="stage-hero" id="top">
+  <div class="mosaic" aria-hidden="true"><img src="art/thumb/gilded-rain.jpg" alt=""><img src="art/thumb/crowned.jpg" alt=""><img src="art/thumb/a-dope-verse.jpg" alt=""><img src="art/thumb/hands-up.jpg" alt=""><img src="art/thumb/keto-diet.jpg" alt=""><img src="art/thumb/objective-subjective.jpg" alt=""><img src="art/thumb/facing-the-sun.jpg" alt=""><img src="art/thumb/held.jpg" alt=""><img src="art/thumb/family.jpg" alt=""><img src="art/thumb/power-in-every-tongue.jpg" alt=""><img src="art/thumb/prism.jpg" alt=""><img src="art/thumb/signal-and-noise.jpg" alt=""><img src="art/thumb/checkered-ground.jpg" alt=""><img src="art/thumb/green-light.jpg" alt=""><img src="art/thumb/crossed.jpg" alt=""><img src="art/thumb/strange-fruit.jpg" alt=""><img src="art/thumb/morse.jpg" alt=""><img src="art/thumb/behind-the-lines.jpg" alt=""></div>
+  <div class="mesh" aria-hidden="true"></div>
+  <div class="wrap hero">
+    <div>
+      <div class="eyebrow">Original paintings · Charlotte, NC</div>
+      <h1>S. Sullivan<br><i>Prewitt</i></h1>
+      <p>I don't plan a painting. I feel it, and when it's finished, it tells me what it is.</p>
+      <div class="cta">
+        <a class="btn solid" href="#works">View the works</a>
+        <a class="btn" href="#contact">Inquire</a>
+      </div>
     </div>
   </div>
+  <a class="scroll-cue" href="#works" aria-label="Scroll to the works">↓</a>
 </div>
+
+<div class="ribbon" aria-hidden="true"><div class="ribbon-track" id="ribbon"></div></div>
 
 <section id="works">
   <div class="wrap">
@@ -347,6 +376,9 @@ document.getElementById('vCopy').onclick=async()=>{
   try{await navigator.clipboard.writeText(msg);note.textContent="Copied. Paste it into a DM to @sullivanprewitt."}
   catch(e){note.textContent=msg}
 };
+
+// ribbon of works
+(function(){const r=document.getElementById('ribbon');if(!r)return;const html=WORKS.map((w,i)=>`<img src="art/thumb/${w.id}.jpg" alt="${w.title}" data-i="${i}" loading="lazy">`).join('');r.innerHTML=html+html;r.addEventListener('click',e=>{const t=e.target.closest('img');if(t)openWork(+t.dataset.i)})})();
 function idxFromHash(){const id=location.hash.slice(1);return WORKS.findIndex(w=>w.id===id)}
 window.addEventListener('popstate',()=>{const i=idxFromHash();if(i>=0){openWork(i,true)}else if(view.classList.contains('open')){pushed=false;hideView()}});
 (function(){const i=idxFromHash();if(i>=0){try{history.replaceState(null,'',location.pathname+location.search+'#works');history.pushState({w:1},'','#'+WORKS[i].id);pushed=true}catch(e){}openWork(i,true)}})();
