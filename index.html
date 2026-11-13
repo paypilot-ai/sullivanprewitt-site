@@ -317,7 +317,9 @@ document.querySelectorAll('.filters button').forEach(b=>b.onclick=()=>{
 // detail view with #hash routing
 const view=document.getElementById('view'),vImg=document.getElementById('vImg');
 let cur=-1;
+let pushed=false;
 function openWork(i,fromHash){
+  const wasOpen=view.classList.contains('open');
   cur=(i+WORKS.length)%WORKS.length;const w=WORKS[cur];
   vImg.classList.remove('zoom');vImg.src=`art/${w.id}.jpg`;vImg.alt=`${w.title} by S. Sullivan Prewitt`;
   document.getElementById('vNo').textContent=`No. ${String(cur+1).padStart(2,'0')} of ${WORKS.length}`;
@@ -326,10 +328,11 @@ function openWork(i,fromHash){
   document.getElementById('vDesc').innerHTML=w.desc.map(p=>`<p>${p}</p>`).join('');
   document.getElementById('vNote').textContent="";
   view.classList.add('open');view.scrollTop=0;document.body.style.overflow='hidden';
-  if(!fromHash&&location.hash!=='#'+w.id){try{history.replaceState(null,'','#'+w.id)}catch(e){location.hash=w.id}}
+  if(!fromHash){const h='#'+w.id;try{if(wasOpen){history.replaceState({w:1},'',h)}else{history.pushState({w:1},'',h);pushed=true}}catch(e){}}
   document.title=`${w.title} — S. Sullivan Prewitt`;
 }
-function closeWork(){view.classList.remove('open');document.body.style.overflow='';cur=-1;document.title='S. Sullivan Prewitt — Original Paintings';try{history.replaceState(null,'','#works')}catch(e){}}
+function hideView(){view.classList.remove('open');document.body.style.overflow='';cur=-1;document.title='S. Sullivan Prewitt — Original Paintings'}
+function closeWork(){if(pushed){pushed=false;history.back()}else{hideView();try{history.replaceState(null,'',location.pathname+location.search)}catch(e){}}}
 document.getElementById('vx').onclick=closeWork;
 document.getElementById('vp').onclick=()=>openWork(cur-1);
 document.getElementById('vn').onclick=()=>openWork(cur+1);
@@ -343,8 +346,9 @@ document.getElementById('vCopy').onclick=async()=>{
   try{await navigator.clipboard.writeText(msg);note.textContent="Copied. Paste it into a DM to @sullivannoir."}
   catch(e){note.textContent=msg}
 };
-function fromHash(){const id=location.hash.slice(1);const i=WORKS.findIndex(w=>w.id===id);if(i>=0)openWork(i,true);else if(cur>=0&&view.classList.contains('open'))closeWork()}
-window.addEventListener('hashchange',fromHash);fromHash();
+function idxFromHash(){const id=location.hash.slice(1);return WORKS.findIndex(w=>w.id===id)}
+window.addEventListener('popstate',()=>{const i=idxFromHash();if(i>=0){openWork(i,true)}else if(view.classList.contains('open')){pushed=false;hideView()}});
+(function(){const i=idxFromHash();if(i>=0){try{history.replaceState(null,'',location.pathname+location.search+'#works');history.pushState({w:1},'','#'+WORKS[i].id);pushed=true}catch(e){}openWork(i,true)}})();
 </script>
 </body>
 </html>
