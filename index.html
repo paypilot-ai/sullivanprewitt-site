@@ -172,6 +172,12 @@
   .foot-base{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:20px;padding-bottom:26px;font-size:12px;color:var(--muted)}
   .totop{color:var(--gold);text-decoration:none;letter-spacing:.1em}
   @media (max-width:900px){.finale-cards{grid-template-columns:1fr}.foot-in{grid-template-columns:1fr;gap:28px}}
+
+  .artbg{position:relative;overflow:hidden;isolation:isolate}
+  .artbg::before{content:"";position:absolute;inset:-60px;z-index:-2;background:var(--art) center/cover no-repeat;filter:blur(26px) saturate(1.4);opacity:.32}
+  .artbg::after{content:"";position:absolute;inset:0;z-index:-1;background-image:repeating-linear-gradient(0deg,rgba(0,0,0,.5) 0 2px,transparent 2px 9px),repeating-linear-gradient(90deg,rgba(0,0,0,.5) 0 2px,transparent 2px 9px),linear-gradient(180deg,rgba(13,12,11,.55),rgba(13,12,11,.75));opacity:.9}
+  .artbg.alt{background:rgba(22,21,19,.6)}
+  #works.artbg::before{opacity:.2}
 </style>
 </head>
 <body>
@@ -205,7 +211,7 @@
 
 <div class="ribbon" aria-hidden="true"><div class="ribbon-track" id="ribbon"></div></div>
 
-<section id="works">
+<section id="works" class="artbg" style="--art:url(art/thumb/strange-fruit.jpg)">
   <div class="wrap">
     <div class="sec-head">
       <div><div class="eyebrow">Selected works</div><h2>The Collection</h2></div>
@@ -220,7 +226,7 @@
   </div>
 </section>
 
-<section id="about" class="alt">
+<section id="about" class="alt artbg" style="--art:url(art/thumb/hands-up.jpg)">
   <div class="wrap two">
     <div>
       <div class="eyebrow">Artist statement</div>
@@ -237,7 +243,7 @@
   </div>
 </section>
 
-<section id="commissions">
+<section id="commissions" class="artbg" style="--art:url(art/thumb/a-dope-verse.jpg)">
   <div class="wrap two">
     <div>
       <div class="eyebrow">Commissions</div>
@@ -257,7 +263,7 @@
   </div>
 </section>
 
-<section class="alt">
+<section class="alt artbg" style="--art:url(art/thumb/facing-the-sun.jpg)">
   <div class="wrap two">
     <div>
       <div class="eyebrow">For collectors</div>
