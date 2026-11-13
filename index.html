@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sullivan Prewitt — Original Paintings</title>
+<meta name="description" content="Original mixed-media paintings by S. Sullivan Prewitt, Charlotte, NC, exploring memory, trauma and survival. Inquire about available works and commissions.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sullivan Prewitt — Original Paintings">
+<meta property="og:description" content="Original mixed-media paintings from Charlotte, NC. Available works and commissions.">
+<meta property="og:image" content="https://sullivanprewitt.com/art/gilded-rain.jpg">
+<link rel="canonical" href="https://sullivanprewitt.com/">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"S. Sullivan Prewitt","alternateName":["Sullivan Prewitt","Sullivan Noir"],"jobTitle":"Painter","homeLocation":{"@type":"Place","name":"Charlotte, North Carolina"},"sameAs":["https://www.instagram.com/sullivannoir/"]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Inter+Tight:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#0d0c0b;--ink-2:#161513;--line:#2a2825;--paper:#efe9df;--soft:#d6cfc3;--muted:#9a948a;--gold:#c9a24a}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--ink);color:var(--paper);font-family:"Inter Tight",system-ui,sans-serif;font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .serif{font-family:"Bodoni Moda",Georgia,serif;font-weight:400}
+  .eyebrow{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+  .wrap{max-width:1320px;margin:0 auto;padding:0 clamp(20px,5vw,64px)}
+  .btn{display:inline-block;padding:13px 22px;border:1px solid var(--gold);color:var(--gold);font-size:12px;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;background:none;cursor:pointer;font-family:inherit;transition:background .2s,color .2s}
+  .btn:hover,.btn.solid{background:var(--gold);color:var(--ink)}
+  .btn.solid:hover{background:transparent;color:var(--gold)}
+
+  header{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:16px clamp(20px,5vw,64px);background:rgba(13,12,11,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .mark{font-family:"Bodoni Moda",serif;font-size:20px;text-decoration:none}
+  .mark i{color:var(--gold)}
+  nav a{font-size:12px;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;color:var(--muted);margin-left:26px;transition:color .2s}
+  nav a:hover{color:var(--paper)}
+
+  .hero{display:grid;grid-template-columns:1fr;gap:clamp(30px,5vw,80px);align-items:center;padding-top:clamp(56px,9vw,110px);padding-bottom:clamp(56px,9vw,110px)}
+  .hero h1{font-family:"Bodoni Moda",serif;font-weight:400;font-size:clamp(56px,10vw,136px);line-height:.92;letter-spacing:-.02em;margin:18px 0 26px}
+  .hero h1 i{color:var(--gold)}
+  .hero p{max-width:620px;color:#cfc8bc;font-size:clamp(16px,1.6vw,19px);margin-bottom:30px}
+  .hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+  .hero-art{background:var(--ink-2);padding:clamp(14px,2.4vw,30px);cursor:zoom-in}
+  .hero-art img{width:100%;display:block;box-shadow:0 30px 60px -20px rgba(0,0,0,.8)}
+  .hero-art figcaption{margin-top:14px;font-size:13px;color:var(--muted)}
+  .hero-art figcaption b{font-family:"Bodoni Moda",serif;font-weight:400;color:var(--paper);font-size:16px;margin-right:8px}
+
+  section{border-top:1px solid var(--line)}
+  .sec-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;padding:clamp(56px,8vw,96px) 0 34px}
+  .sec-head h2{font-family:"Bodoni Moda",serif;font-weight:400;font-size:clamp(40px,5.4vw,72px);line-height:1;margin-top:12px}
+  .filters{display:flex;gap:6px;flex-wrap:wrap}
+  .filters button{background:none;border:1px solid var(--line);color:var(--muted);padding:9px 16px;font:inherit;font-size:12px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
+  .filters button[aria-pressed="true"]{border-color:var(--gold);color:var(--gold)}
+
+  .grid{columns:3 320px;column-gap:28px;padding-bottom:clamp(56px,8vw,100px)}
+  .card{break-inside:avoid;margin-bottom:34px;cursor:pointer;display:block;background:none;border:0;color:inherit;text-align:left;width:100%;font:inherit}
+  .card .ph{background:var(--ink-2);padding:16px;overflow:hidden}
+  .card img{width:100%;display:block;transition:transform .5s ease}
+  .card:hover img{transform:scale(1.025)}
+  .card .cap{display:flex;justify-content:space-between;gap:12px;margin-top:12px;align-items:baseline}
+  .card .t{font-family:"Bodoni Moda",serif;font-size:19px}
+  .card .s{font-size:12px;color:var(--muted);white-space:nowrap}
+  .card .d{font-size:12.5px;color:var(--muted)}
+  .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#6fae6a;margin-right:6px;vertical-align:1px}
+  .dot.sold{background:#b0453b}.dot.nfs{background:var(--muted)}
+
+  .two{display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(28px,6vw,90px);padding:clamp(56px,9vw,110px) 0}
+  .two h2{font-family:"Bodoni Moda",serif;font-weight:400;font-size:clamp(38px,5vw,64px);line-height:1;margin-top:12px}
+  .two h2 i{color:var(--gold)}
+  .two p{color:var(--soft);margin-bottom:16px;font-size:16.5px}
+  .quote{font-family:"Bodoni Moda",serif;font-style:italic;font-size:clamp(22px,2.4vw,28px);line-height:1.35;color:var(--paper);border-left:2px solid var(--gold);padding-left:22px;margin-bottom:26px}
+  .alt{background:var(--ink-2)}
+
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin:8px 0 28px}
+  .step{border-top:1px solid var(--line);padding-top:16px}
+  .step b{display:block;font-family:"Bodoni Moda",serif;font-weight:400;font-size:28px;color:var(--gold)}
+  .step span{display:block;font-weight:500;margin:4px 0 6px}
+  .step p{font-size:14.5px;margin:0}
+
+  details{border-top:1px solid var(--line);padding:18px 0}
+  details:last-of-type{border-bottom:1px solid var(--line)}
+  summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;font-size:17px}
+  summary::after{content:"+";color:var(--gold);font-size:22px;line-height:1}
+  details[open] summary::after{content:"–"}
+  details p{margin:12px 0 0;color:var(--soft);font-size:15.5px}
+
+  .contact{text-align:center;padding:clamp(64px,10vw,120px) 0}
+  .contact h2{font-family:"Bodoni Moda",serif;font-weight:400;font-size:clamp(38px,5vw,64px);margin:14px 0 18px}
+  .contact p{color:#cfc8bc;max-width:540px;margin:0 auto 28px}
+  footer{border-top:1px solid var(--line);padding:26px clamp(20px,5vw,64px);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12px;color:var(--muted);letter-spacing:.06em}
+  footer a{color:var(--muted)}
+
+  /* detail view */
+  .view{position:fixed;inset:0;z-index:50;background:#080807;display:none;overflow-y:auto}
+  .view.open{display:block}
+  .view-in{display:grid;grid-template-columns:1.5fr 1fr;min-height:100%}
+  .stage{display:flex;align-items:center;justify-content:center;padding:70px 30px 30px;position:relative}
+  .stage img{max-width:100%;max-height:86vh;box-shadow:0 20px 70px rgba(0,0,0,.7);cursor:zoom-in}
+  .stage img.zoom{max-height:none;cursor:zoom-out}
+  .info{padding:80px clamp(24px,4vw,56px) 50px;border-left:1px solid var(--line);background:var(--ink)}
+  .info h3{font-family:"Bodoni Moda",serif;font-weight:400;font-size:clamp(34px,3.6vw,50px);line-height:1.04;margin:10px 0 18px}
+  .meta{display:grid;grid-template-columns:auto 1fr;gap:7px 22px;font-size:13.5px;margin:0 0 24px;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .meta dt{color:var(--muted);letter-spacing:.14em;text-transform:uppercase;font-size:11px;padding-top:2px}
+  .info .desc p{color:var(--soft);margin-bottom:14px;font-size:15.5px}
+  .info .acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+  .note{font-size:12.5px;color:var(--muted);margin-top:12px;min-height:18px}
+  .vbtn{position:fixed;z-index:55;background:rgba(13,12,11,.7);border:1px solid var(--line);color:var(--paper);width:46px;height:46px;font-size:22px;cursor:pointer;display:none;align-items:center;justify-content:center}
+  .view.open ~ .vbtn{display:flex}
+  .vx{top:14px;right:14px}.vp{left:14px;top:50%}.vn{left:calc(60% - 60px);top:50%}
+
+  @media (max-width:900px){
+    .hero,.two,.view-in{grid-template-columns:1fr}
+    .steps{grid-template-columns:1fr 1fr}
+    .info{border-left:0;border-top:1px solid var(--line);padding-top:36px}
+    .stage{padding:64px 12px 12px}
+    .vn{left:auto;right:14px;top:auto;bottom:14px}.vp{top:auto;bottom:14px}
+    nav a.hide-sm{display:none}
+    nav a{margin-left:16px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="mark" href="#top">S. Sullivan <i>Prewitt</i></a>
+  <nav>
+    <a href="#works">Works</a>
+    <a class="hide-sm" href="#about">About</a>
+    <a class="hide-sm" href="#commissions">Commissions</a>
+    <a href="#contact">Inquire</a>
+  </nav>
+</header>
+
+<div class="wrap hero" id="top">
+  <div>
+    <div class="eyebrow">Original paintings · Charlotte, NC</div>
+    <h1>S. Sullivan<br><i>Prewitt</i></h1>
+    <p>One-of-a-kind mixed-media paintings exploring memory, trauma and what we carry. Built in layers of mesh, metal, texture and raw color.</p>
+    <div class="cta">
+      <a class="btn solid" href="#works">View the works</a>
+      <a class="btn" href="#contact">Inquire</a>
+    </div>
+  </div>
+</div>
+
+<section id="works">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="eyebrow">Selected works</div><h2>The Collection</h2></div>
+      <div class="filters" role="group" aria-label="Filter works">
+        <button data-f="all" aria-pressed="true">All</button>
+        <button data-f="available" aria-pressed="false">Available</button>
+        <button data-f="portrait" aria-pressed="false">Portrait</button>
+        <button data-f="landscape" aria-pressed="false">Landscape</button>
+      </div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section id="about" class="alt">
+  <div class="wrap two">
+    <div>
+      <div class="eyebrow">Artist statement</div>
+      <h2>Behind<br>the <i>work</i></h2>
+    </div>
+    <div>
+      <p class="quote">"I don't plan a painting. I feel it, and when it's finished, it tells me what it is."</p>
+      <p>Painting is how I express what I feel. I work without a sketch or a plan. I start with a feeling, a color or a texture and follow it: paint pushed through mesh, scraped into ridges, layered with silver, gold and spray paint. I stop when it feels done, and only then step back to see what came out.</p>
+      <p>What comes out is usually memory: the good ones, the ones that still hurt, and the trauma that sits underneath ordinary days. Faces, crowns, bars, fences and words surface on their own. I name each piece after I recognize it.</p>
+      <p>That is why the surfaces are layered and hard to see through. Memory works the same way. You never see all of it at once, only pieces, through something.</p>
+      <p><strong style="font-weight:500;color:var(--paper)">About the artist.</strong> S. Sullivan Prewitt is a self-taught painter based in Charlotte, North Carolina. Every work is an original, one of a kind and signed by the artist.</p>
+    </div>
+  </div>
+</section>
+
+<section id="commissions">
+  <div class="wrap two">
+    <div>
+      <div class="eyebrow">Commissions</div>
+      <h2>A piece made<br>for <i>your</i> wall</h2>
+    </div>
+    <div>
+      <p>Commissions are open for collectors, homes and businesses. Bring a size, a palette or an idea, and the work is made in the same textured, layered style as the collection.</p>
+      <div class="steps">
+        <div class="step"><b>01</b><span>Reach out</span><p>Message with the size, space and any ideas or references.</p></div>
+        <div class="step"><b>02</b><span>Concept</span><p>Agree on direction, palette, timeline and price.</p></div>
+        <div class="step"><b>03</b><span>In progress</span><p>Get photo updates as the layers come together.</p></div>
+        <div class="step"><b>04</b><span>Delivery</span><p>The signed original is packed and delivered or shipped.</p></div>
+      </div>
+      <a class="btn" href="https://www.instagram.com/sullivannoir/" target="_blank" rel="noopener">Start a commission</a>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap two">
+    <div>
+      <div class="eyebrow">For collectors</div>
+      <h2>Buying <i>art</i></h2>
+    </div>
+    <div>
+      <details><summary>How do I buy a painting?</summary><p>Tap any work, then "Inquire about this piece." Every work lists its price. Send the title in a direct message to confirm availability, shipping and next steps.</p></details>
+      <details><summary>Are these originals?</summary><p>Yes. Every painting is an original, one of a kind work on canvas, signed by the artist. A signed certificate of authenticity is available with each purchase.</p></details>
+      <details><summary>Can I see a piece in person?</summary><p>Private viewings can be arranged in the Charlotte, NC area.</p></details>
+      <details><summary>Do you ship?</summary><p>Yes. Works can be shipped or delivered locally. Shipping is quoted based on size and destination.</p></details>
+      <details><summary>Are the paintings framed?</summary><p>Works are painted on stretched canvas and are ready to hang. Framing can be discussed on request.</p></details>
+      <details><summary>How should I care for the work?</summary><p>Hang out of direct sunlight and away from moisture. Dust gently with a soft, dry brush. Some pieces have raised texture and metallic layers, so avoid cleaners or cloths that could catch the surface.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact">
+    <div class="eyebrow">Collect · Commission · Exhibit</div>
+    <h2>Bring a piece <i class="serif" style="color:var(--gold)">home</i></h2>
+    <p>For pricing, availability, private viewings, commissions or exhibition inquiries, message the artist directly. Follow along for new work and first look at new releases.</p>
+    <a class="btn solid" href="https://www.instagram.com/sullivannoir/" target="_blank" rel="noopener">@sullivannoir on Instagram</a>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 S. Sullivan Prewitt. All works original. Images may not be reproduced without permission.</span>
+  <span><a href="https://www.instagram.com/sullivannoir/" target="_blank" rel="noopener">Instagram</a> · Charlotte, North Carolina</span>
+</footer>
+
+<div class="view" id="view" role="dialog" aria-modal="true" aria-label="Artwork detail">
+  <div class="view-in">
+    <div class="stage"><img id="vImg" alt=""></div>
+    <div class="info">
+      <div class="eyebrow" id="vNo"></div>
+      <h3 id="vTitle"></h3>
+      <dl class="meta" id="vMeta"></dl>
+      <div class="desc" id="vDesc"></div>
+      <div class="acts">
+        <a class="btn solid" href="https://www.instagram.com/sullivannoir/" target="_blank" rel="noopener">Inquire about this piece</a>
+        <button class="btn" id="vCopy">Copy inquiry message</button>
+      </div>
+      <div class="note" id="vNote"></div>
+    </div>
+  </div>
+</div>
+<button class="vbtn vx" id="vx" aria-label="Close">×</button>
+<button class="vbtn vp" id="vp" aria-label="Previous work">‹</button>
+<button class="vbtn vn" id="vn" aria-label="Next work">›</button>
+
+<script>
+/* ===== EDIT YOUR WORKS HERE =====
+   status: "Available" | "Sold" | "Not for sale"
+   price:  e.g. "$3,200" or "Price on request"                      */
+const WORKS = [
+ {id:"gilded-rain",title:"Gilded Rain",year:"2026",medium:"Acrylic, gold leaf, spray paint and sculpted relief on canvas",size:"24 × 36 in",o:"portrait",status:"Available",price:"$6,800",
+  desc:["She keeps one eye open. The other is covered by a mask of black, slate and electric blue, cut in hard angles like broken glass. It protects her and blinds her at the same time, the way we all cover the part of us that got hurt.", "Around her, gold falls like rain. Each square of gold leaf is capped in blue, like a small house or a wrapped gift: blessings, opportunities, things promised. Between them hang dark sculpted orbs that rise off the canvas and cast real shadows. Some of what falls on you is gold, and some of it is weight, and it comes down at the same time.", "Look at her chest: small marks of gold sit there too. What fell on her is now part of her. She doesn't flinch. She stands in the storm with her head tilted, as if she has decided to let all of it land."]},
+ {id:"strange-fruit",title:"Strange Fruit",year:"2026",medium:"Acrylic and mixed media on canvas, mesh-pressed texture",size:"36 × 24 in",o:"landscape",status:"Available",price:"$7,500",
+  desc:["It looks like pop art until you look longer. A soft pink grid, a bubble-lettered DOPE, the word SMILE written in brown. Then the faces start to show: one with tears under its eyes, one with lips pressed shut beside the words GANG GANG, one at the top whispering OHH, and one at the bottom with a frown and a word it can't say politely.", "In a small white window under a tree, two figures hang. The words STRANGE FRUIT are written beside the tree, the name of the song that bore witness to lynching in America. In the corner, JUMPED OFF THE PORCH, the moment a boy first steps out into the streets, and at the top its initials, J.O.T.P.", "Step back and the white and blue arcs across the dark squares start to read as brows, a nose and a mouth: one huge face spread across the whole canvas, made out of pieces. It is the face we are told to wear. The painting asks what it costs to be told to smile, and how far the present really sits from the past."]},
+ {id:"crossed",title:"Enough",year:"2026",medium:"Acrylic and metallic paint on canvas",size:"20 × 24 in",o:"portrait",status:"Available",price:"$3,200",
+  desc:["A blue figure locks both arms into a hard X across his chest. His eyes are closed and his mouth is open, somewhere between a shout and a breath he has been holding too long. A small red wound sits at his temple, and red runs down the silver behind him.", "The beams around him are painted in the colors of caution tape, yellow and black, crossing the canvas like a scene that has been taped off or a structure coming down. Brown rails hold him in from below.", "The X can be read many ways: a refusal, a shield, a signal to stop. Whatever it is, it is final. This is the moment someone decides they have taken enough."]},
+ {id:"a-dope-verse",title:"A Dope Verse on a Fresh Beat",year:"2026",medium:"Acrylic and mixed media on canvas",size:"20 × 24 in",o:"portrait",status:"Available",price:"$10,000",
+  desc:["This one is for Ona, the artist's wife. A DOPE VERSE ON A FRESH BEAT loops across the canvas in orange and lime, a line from Brown Sugar, her favorite movie: the 2002 film about two childhood friends whose love for each other grows up alongside their love for hip-hop. In that story, falling for the music and falling for a person turn out to be the same thing.", "Look into the strips and her name repeats again and again, stenciled small and hidden between the bars: ONA, beside DOPE and VERSE, like a hook you keep coming back to. A big hollow OB sits at the top like a speaker cone, and marbled swirls hide in the gaps the way a sample hides in a beat.", "It is a love letter built the way a song is built: a rhythm of black, brown, blue and silver strips, her name woven all the way through it, and one line on top that says what she is. A dope verse on a fresh beat."]},
+ {id:"crowned",title:"Crowned",year:"2026",medium:"Acrylic on canvas, mesh-pressed texture",size:"20 × 24 in",o:"portrait",status:"Available",price:"$3,200",
+  desc:["A figure rises through a dense mesh grid wearing a crown of dripping gold. The body is painted in red, white and blue, the colors of a flag, but the crown is his own.", "White beams cross the left side in sharp diagonals, like scaffolding or the bars of a window. In the lower corner a pale shape with a dark hollow sits in the grid like a skull, a reminder of what it cost to get here. The crown and the skull share the same canvas.", "Everything is seen through the mesh, so the image breaks apart up close and comes back together from across the room. Royalty here is not handed down. You have to look for it, and you have to survive to wear it."]},
+ {id:"held",title:"Held",year:"2026",medium:"Acrylic on canvas",size:"18 × 24 in",o:"portrait",status:"Available",price:"$2,800",
+  desc:["A figure stands behind heavy gray bars, painted from the back, with a pale halo circling the head. The face is gone. Where it should be, a white streak runs straight down, like a tear, a crack, or light coming through.", "The body is built from swirling strokes of brown and silver, with bright red threaded through it like veins, fire or wounds that never closed. Behind the figure, the background glows yellow, like daylight on the other side of a cell window.", "The bars are rough and smeared with white, as if they have been gripped for a long time. The halo says this person is still holy to someone. The bars say they are still held."]},
+ {id:"objective-subjective",title:"In Between",year:"2026",medium:"Acrylic on canvas, mesh-pressed texture",size:"24 × 30 in",o:"portrait",status:"Available",price:"$4,600",
+  desc:["Two roads cross at the center of this canvas. A gold line runs straight down, another cuts straight across, and where they meet, every direction is still possible. Above the crossing floats OBJECTIVE, the world as it is. Below it sinks SUBJECTIVE, the world as it feels. The painting lives in the space between them, the place where real decisions get made.", "At the center a form rises like a flower or a flame, with a small red X marked near its heart: the spot where you have to choose. Around it, the faces watch. One on the right smiles calmly, as if it already knows the answer. Another on the left is drawn so large and loose that it is easy to miss, until it looks back at you. Look longer and more appear in the mesh, eyes in the corners and a mouth in the pattern. They are the voices everyone carries to a crossroads.", "Then there are the words you are not meant to read at first glance. Small red letters sit half-buried under the grid in the top and bottom corners, partly covered, like the thoughts you don't say out loud. Everything here is seen through a screen, so nothing is completely clear. That is the point: at a crossroads, you never see the whole road. You go by feeling."]},
+ {id:"family",title:"Family",year:"2026",medium:"Acrylic on canvas, mesh-pressed texture",size:"24 × 18 in",o:"landscape",status:"Available",price:"$2,800",
+  desc:["At first it looks like a celebration. Small figures with gold faces throw their arms in the air across a soft field of peach, cream and blue, like cousins at a cookout or a church full of people in praise. Above them, the word FAMILY is spelled out in red.", "But the painting turns on two words that sound the same: pray and prey. Raised hands can be worship, or they can be someone caught with nowhere to go. One small figure carries a red box like a gift, or like something being handed over. Off to one side, a larger figure in a rust-colored robe sits still and watches all of it, and it is never clear whether that one is protecting the others or taking from them.", "This is about being taken advantage of by the people closest to you: the ones you pray with, who sometimes treat you as prey. A grid lies over everything, like a screen door, so the scene stays a little blurred. That is how it feels from inside a family. You love them, and you still have to watch your back."]},
+ {id:"keto-diet",title:"Keto Diet",year:"2026",medium:"Acrylic and metallic paint on canvas",size:"20 × 24 in",o:"portrait",status:"Available",price:"$3,200",
+  desc:["Two dark figures mirror each other across a silver surface striped with fine blue lines, one standing and one hanging upside down above, head to head like a reflection in water. Their eyes are small and red.", "Words float around them. KETO DIET on one side, THE BREAD on the other, and they flip with the figures, so one version of each reads upside down. Bread is food, and bread is money. Cutting it out is a diet in one world and a crisis in the other. Fainter words drift behind them in brown, almost erased.", "It is a sly piece about appetite, discipline and money, and about the version of yourself you only see when the world turns upside down."]},
+ {id:"checkered-ground",title:"Out of Reach",year:"2026",medium:"Acrylic on canvas",size:"36 × 24 in",o:"landscape",status:"Available",price:"$5,600",
+  desc:["Two dark figures share one landscape. One sits on a deep red wall with his arms locked in a ring above his head, part stretch and part surrender. The other leans forward in green-black shadow, one arm reaching across the grass toward him.", "Above them is everything peaceful: tall grass, two trees, a wide blue sky with birds and a pale sun breaking through the clouds. Below them is a black-and-white checkerboard, the floor of a game where every square is decided. Look at the ground near their feet: there is a mark of red.", "They are close enough to touch and still on separate squares. The painting holds that exact feeling: reaching for someone who is right there and still out of reach."]},
+ {id:"green-light",title:"Breathing Room",year:"2026",medium:"Acrylic on canvas",size:"36 × 24 in",o:"landscape",status:"Available",price:"$5,600",
+  desc:["The whole canvas is woven in yellow, black and green, the colors of the Jamaican flag, laid out like a checkerboard of blinds. Through the stripes, green leaves grow and spread, and in the lower corner the shape of a cannabis leaf comes clear.", "On the right, bands of green, white and red sit inside the pattern like a second flag half-hidden in the weave. The red band feels like a warning; the rest of the canvas feels like an exhale.", "This is the feeling of finally getting space to breathe: the moment the pressure lets go, whatever it took to get there."]},
+ {id:"behind-the-lines",title:"Almost Free",year:"2026",medium:"Acrylic, metallic paint and ridged texture on canvas",size:"16 × 20 in",o:"portrait",status:"Available",price:"$2,200",
+  desc:["A silver field is split down the middle. On the left, ridged vertical lines scrape through layers of brown, black and gold. Look closely and a soft brown form appears, round ears and a body, like a stuffed bear from childhood. On the right, heavy black bars stand like a gate, with a second brown shape pressed right up against them.", "Hidden words run through the piece in blue: PUMP and UP along the left side, HER and PURP at the bottom, and a crowned script floating at the top. They read like overheard lines, or something written on a wall.", "Something innocent sits right next to the bars. It has gotten as close to the other side as it can. That is where the name comes from: almost free."]},
+ {id:"prism",title:"Still Smiling",year:"2026",medium:"Acrylic and metallic paint on canvas",size:"24 × 20 in",o:"landscape",status:"Available",price:"$3,200",
+  desc:["Bright strokes of cobalt, lilac and lime are crossed by bands of silver and white that rise into sharp peaks, like light breaking through a prism, pyramids, or a roofline seen from below. A heavy black grid lies over everything.", "Behind the grid, two faces wait. On the right, a figure in burnt orange looks straight out through the bars with a wide smile, the teeth picked out in white dots. On the left, a second face hides under a dark hat behind thin lines like guitar strings.", "The color is joyful and the structure is not. The smile holds anyway. That is the whole painting: keeping your light on while the bars are still there."]},
+ {id:"morse",title:"Scattered",year:"2026",medium:"Acrylic and metallic paint on canvas",size:"18 × 24 in",o:"portrait",status:"Available",price:"$2,800",
+  desc:["Over a dusty rose ground, short bars of black, silver, maroon and gold line up in rows next to dark circles, like dots and dashes in a message only half decoded. Some rows almost spell something, then break apart.", "Blue and coral strokes sweep diagonally underneath, and cracked texture shows through in places, like an old wall or a memory that has been painted over too many times.", "This is what a mind feels like when too much is happening at once: pieces of thoughts everywhere, almost making sense, never quite lining up."]},
+ {id:"signal-and-noise",title:"Restless",year:"2026",medium:"Acrylic on canvas, mesh-pressed texture",size:"24 × 18 in",o:"landscape",status:"Available",price:"$2,800",
+  desc:["A dark woven field that reads like a television between channels. Deep navy and black are pressed through a grid until the surface flickers, then cut by a slash of brick red, a bloom of violet-blue and bursts of white.", "Look at the lower left. A large eye is hidden in the static, half-open and looking out. Once you find it, you can't stop seeing it.", "This is the feeling of lying awake at night with your mind running, the noise and the light that won't let you rest, and the sense that something in the dark is watching back."]},
+ {id:"power-in-every-tongue",title:"Power in Every Tongue",year:"2026",medium:"Acrylic on canvas",size:"20 × 16 in",o:"landscape",status:"Available",price:"$2,200",
+  desc:["Red words cover the canvas in many languages and alphabets, and they all mean the same thing: power, strength, force. KRAFT, STRØM, MOC, SNAGA, KUASA, POTERE, ERŐ, the Korean 힘, the Japanese パワー and, among them, AGBARA, the Yoruba word for power, and AMANDLA, the Zulu and Xhosa word that became the rallying cry of South Africa's freedom struggle.", "Black stripes are scraped over the writing like static or censor bars. Look between them and faces appear, eyes and lips hidden all across the canvas, as if the people who speak these words are standing just behind the stripes.", "Every language has a word for power. The question the painting asks is who gets to say it out loud."]},
+ {id:"hands-up",title:"Hands Up",year:"2026",medium:"Acrylic on canvas, mesh-pressed texture",size:"20 × 16 in",o:"landscape",status:"Available",price:"$2,200",
+  desc:["Two pale blue handprints press out of a near-black field, palms open toward you, one on each side of a shadowed figure standing in the middle. Above them hang a full moon and a smaller second moon, both seen through a fine grid.", "Raised hands mean different things to different people: praise, surrender, a greeting, or a plea not to shoot. Here the hands are real prints, pressed straight onto the canvas, proof that someone was here.", "Worn bands of silver frame the top and bottom like the edges of an old photograph, and flecks of green catch the light near the ground. It feels like a night that someone wants remembered."]},
+ {id:"facing-the-sun",title:"Better Days",year:"2026",medium:"Acrylic on canvas",size:"18 × 24 in",o:"portrait",status:"Available",price:"$2,800",
+  desc:["A woman in profile, painted in deep cobalt and sky blue, turns toward a field of bright yellow. Her hair sweeps back in white-tipped strokes like wind, water or wings.", "Near her eye there is one mark of red and white, the only warm note on her face, like a tear she has already cried or a scar that has healed. Her mouth is slightly open, as if she is taking her first full breath in a long time.", "Everything behind her is cool and moving. Everything ahead of her is warm and still. She has decided which way to face."]}
+];
+const IG = "https://www.instagram.com/sullivannoir/";
+const dotClass = s => s==="Sold"?"sold":s==="Not for sale"?"nfs":"";
+
+// grid
+const grid=document.getElementById('grid');
+function render(f="all"){
+  grid.innerHTML="";
+  WORKS.forEach((w,i)=>{
+    if(f==="available"&&w.status!=="Available")return;
+    if((f==="portrait"||f==="landscape")&&w.o!==f)return;
+    const b=document.createElement('button');b.className='card';b.dataset.i=i;
+    b.innerHTML=`<div class="ph"><img src="art/thumb/${w.id}.jpg" alt="${w.title} by S. Sullivan Prewitt, ${w.medium}" loading="lazy" width="640"></div>
+      <div class="cap"><span class="t">${w.title}</span><span class="s">${w.size}</span></div>
+      <div class="d"><span class="dot ${dotClass(w.status)}"></span>${w.status} · ${w.year}</div>`;
+    b.onclick=()=>openWork(i);grid.appendChild(b);
+  });
+}
+render();
+document.querySelectorAll('.filters button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.filters button').forEach(x=>x.setAttribute('aria-pressed',x===b));
+  render(b.dataset.f);
+});
+
+// detail view with #hash routing
+const view=document.getElementById('view'),vImg=document.getElementById('vImg');
+let cur=-1;
+function openWork(i,fromHash){
+  cur=(i+WORKS.length)%WORKS.length;const w=WORKS[cur];
+  vImg.classList.remove('zoom');vImg.src=`art/${w.id}.jpg`;vImg.alt=`${w.title} by S. Sullivan Prewitt`;
+  document.getElementById('vNo').textContent=`No. ${String(cur+1).padStart(2,'0')} of ${WORKS.length}`;
+  document.getElementById('vTitle').textContent=w.title;
+  document.getElementById('vMeta').innerHTML=`<dt>Year</dt><dd>${w.year}</dd><dt>Medium</dt><dd>${w.medium}</dd><dt>Size</dt><dd>${w.size}</dd><dt>Status</dt><dd><span class="dot ${dotClass(w.status)}"></span>${w.status}</dd><dt>Price</dt><dd>${w.price}</dd><dt>Edition</dt><dd>Original, signed by the artist</dd>`;
+  document.getElementById('vDesc').innerHTML=w.desc.map(p=>`<p>${p}</p>`).join('');
+  document.getElementById('vNote').textContent="";
+  view.classList.add('open');view.scrollTop=0;document.body.style.overflow='hidden';
+  if(!fromHash&&location.hash!=='#'+w.id){try{history.replaceState(null,'','#'+w.id)}catch(e){location.hash=w.id}}
+  document.title=`${w.title} — S. Sullivan Prewitt`;
+}
+function closeWork(){view.classList.remove('open');document.body.style.overflow='';cur=-1;document.title='Sullivan Prewitt — Original Paintings';try{history.replaceState(null,'','#works')}catch(e){}}
+document.getElementById('vx').onclick=closeWork;
+document.getElementById('vp').onclick=()=>openWork(cur-1);
+document.getElementById('vn').onclick=()=>openWork(cur+1);
+vImg.onclick=()=>vImg.classList.toggle('zoom');
+document.addEventListener('keydown',e=>{if(cur<0)return;if(e.key==='Escape')closeWork();if(e.key==='ArrowRight')openWork(cur+1);if(e.key==='ArrowLeft')openWork(cur-1)});
+let sx=null;view.addEventListener('touchstart',e=>{sx=e.touches[0].clientX},{passive:true});
+view.addEventListener('touchend',e=>{if(sx===null)return;const dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>60&&!vImg.classList.contains('zoom'))openWork(cur+(dx<0?1:-1));sx=null});
+document.getElementById('vCopy').onclick=async()=>{
+  const w=WORKS[cur],msg=`Hi! I'm interested in "${w.title}" (${w.size}). Is it still available?`;
+  const note=document.getElementById('vNote');
+  try{await navigator.clipboard.writeText(msg);note.textContent="Copied. Paste it into a DM to @sullivannoir."}
+  catch(e){note.textContent=msg}
+};
+function fromHash(){const id=location.hash.slice(1);const i=WORKS.findIndex(w=>w.id===id);if(i>=0)openWork(i,true);else if(cur>=0&&view.classList.contains('open'))closeWork()}
+window.addEventListener('hashchange',fromHash);fromHash();
+</script>
+</body>
+</html>
