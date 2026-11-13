@@ -65,12 +65,15 @@
   .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#6fae6a;margin-right:6px;vertical-align:1px}
   .dot.sold{background:#b0453b}.dot.nfs{background:var(--muted)}
 
-  .two{display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(28px,6vw,90px);padding:clamp(56px,9vw,110px) 0}
+  .two{display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(28px,6vw,90px);padding-top:clamp(56px,9vw,110px);padding-bottom:clamp(56px,9vw,110px)}
   .two h2{font-family:"Bodoni Moda",serif;font-weight:400;font-size:clamp(38px,5vw,64px);line-height:1;margin-top:12px}
   .two h2 i{color:var(--gold)}
   .two p{color:var(--soft);margin-bottom:16px;font-size:16.5px}
   .quote{font-family:"Bodoni Moda",serif;font-style:italic;font-size:clamp(22px,2.4vw,28px);line-height:1.35;color:var(--paper);border-left:2px solid var(--gold);padding-left:22px;margin-bottom:26px}
   .alt{background:var(--ink-2)}
+  .portrait{margin-top:32px;max-width:360px}
+  .portrait img{width:100%;display:block;filter:grayscale(.15) contrast(1.05);box-shadow:0 24px 50px -20px rgba(0,0,0,.8)}
+  .portrait figcaption{font-size:12.5px;color:var(--muted);margin-top:10px}
 
   .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin:8px 0 28px}
   .step{border-top:1px solid var(--line);padding-top:16px}
@@ -164,6 +167,7 @@
     <div>
       <div class="eyebrow">Artist statement</div>
       <h2>Behind<br>the <i>work</i></h2>
+      <figure class="portrait"><img src="art/artist.jpg" alt="S. Sullivan Prewitt in front of his painting Still Smiling" loading="lazy"><figcaption>S. Sullivan Prewitt with <i>Still Smiling</i></figcaption></figure>
     </div>
     <div>
       <p class="quote">"I don't plan a painting. I feel it, and when it's finished, it tells me what it is."</p>
