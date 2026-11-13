@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sullivan Prewitt — Original Paintings</title>
+<title>S. Sullivan Prewitt — Original Paintings</title>
 <meta name="description" content="Original mixed-media paintings by S. Sullivan Prewitt, Charlotte, NC, exploring memory, trauma and survival. Inquire about available works and commissions.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Sullivan Prewitt — Original Paintings">
+<meta property="og:title" content="S. Sullivan Prewitt — Original Paintings">
 <meta property="og:description" content="Original mixed-media paintings from Charlotte, NC. Available works and commissions.">
 <meta property="og:image" content="https://sullivanprewitt.com/art/gilded-rain.jpg">
 <link rel="canonical" href="https://sullivanprewitt.com/">
@@ -325,7 +325,7 @@ function openWork(i,fromHash){
   if(!fromHash&&location.hash!=='#'+w.id){try{history.replaceState(null,'','#'+w.id)}catch(e){location.hash=w.id}}
   document.title=`${w.title} — S. Sullivan Prewitt`;
 }
-function closeWork(){view.classList.remove('open');document.body.style.overflow='';cur=-1;document.title='Sullivan Prewitt — Original Paintings';try{history.replaceState(null,'','#works')}catch(e){}}
+function closeWork(){view.classList.remove('open');document.body.style.overflow='';cur=-1;document.title='S. Sullivan Prewitt — Original Paintings';try{history.replaceState(null,'','#works')}catch(e){}}
 document.getElementById('vx').onclick=closeWork;
 document.getElementById('vp').onclick=()=>openWork(cur-1);
 document.getElementById('vn').onclick=()=>openWork(cur+1);
