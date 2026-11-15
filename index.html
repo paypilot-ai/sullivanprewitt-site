@@ -181,6 +181,10 @@
   .artbg::after{content:"";position:absolute;inset:0;z-index:-1;background-image:repeating-linear-gradient(0deg,rgba(0,0,0,.5) 0 2px,transparent 2px 9px),repeating-linear-gradient(90deg,rgba(0,0,0,.5) 0 2px,transparent 2px 9px),linear-gradient(180deg,rgba(13,12,11,.55),rgba(13,12,11,.75));opacity:.9}
   .artbg.alt{background:rgba(22,21,19,.6)}
   #works.artbg::before{opacity:.2}
+
+  .stage{position:relative}
+  .stage .glowbtn{position:absolute;top:16px;left:50%;transform:translateX(-50%);z-index:3;box-shadow:0 6px 24px rgba(0,0,0,.6);font-size:13px;padding:11px 20px}
+  .glowtag{display:inline-block;margin-left:8px;font-family:"Inter Tight",sans-serif;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#9ff0d0;border:1px solid rgba(159,240,208,.55);padding:2px 6px;vertical-align:3px}
 </style>
 </head>
 <body>
@@ -413,7 +417,7 @@ function render(f="all"){
     if((f==="portrait"||f==="landscape")&&w.o!==f)return;
     const b=document.createElement('button');b.className='card';b.dataset.i=i;
     b.innerHTML=`<div class="ph"><img src="art/thumb/${w.id}.jpg" alt="${w.title} by S. Sullivan Prewitt, ${w.medium}" loading="lazy" width="640"></div>
-      <div class="cap"><span class="t">${w.title}</span><span class="s">${w.size}</span></div>
+      <div class="cap"><span class="t">${w.title}${w.glow?'<span class="glowtag">Glows</span>':''}</span><span class="s">${w.size}</span></div>
       <div class="d"><span class="dot ${dotClass(w.status)}"></span>${w.status} · ${w.year}</div>`;
     b.onclick=()=>openWork(i);grid.appendChild(b);
   });
